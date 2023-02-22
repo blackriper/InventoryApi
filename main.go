@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"github.com/blackriper/inventory-api/routes"
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	fmt.Println("Hello, world!")
+	r := gin.Default()
+	routes.Routes(r)
+	r.Run()
 }
